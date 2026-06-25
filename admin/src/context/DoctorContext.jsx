@@ -13,7 +13,7 @@ const DoctorContextProvider = (props) => {
 
     const listAppointments = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/doctor/doctorAppointments",
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/doctor/doctorAppointments",
                 {
                     headers: { "dToken": dToken }
                 }
@@ -31,7 +31,7 @@ const DoctorContextProvider = (props) => {
 
     const completeAppointment = async (appointmentId) => {
         try {
-            const { data } = await axios.post("http://localhost:4000/api/doctor/complete",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/doctor/complete",
                 { appointmentId },
                 { headers: { "dToken": dToken } }
             )
@@ -50,7 +50,7 @@ const DoctorContextProvider = (props) => {
 
     const cancelAppointment = async (appointmentId) => {
         try {
-            const { data } = await axios.post("http://localhost:4000/api/doctor/cancel",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/doctor/cancel",
                 { appointmentId },
                 { headers: { "dToken": dToken } }
             )
