@@ -14,7 +14,7 @@ const AdminContextProvider = (props) => {
 
     const getAllDoctors = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/admin/allDoctors",
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/admin/allDoctors",
                 // {},
                 {
                     headers: { "token": token }
@@ -32,7 +32,7 @@ const AdminContextProvider = (props) => {
 
     const changeAvailability = async (docId) => {
         try {
-            const { data } = await axios.post("http://localhost:4000/api/admin/changeAvailability",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/admin/changeAvailability",
                 { docId },
                 {
                     headers: { "token": token }
@@ -52,7 +52,7 @@ const AdminContextProvider = (props) => {
 
     const getAllAppointments = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/admin/allAppointments",
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/admin/allAppointments",
                 {
                     headers: { "token": token }
                 }
@@ -74,7 +74,7 @@ const AdminContextProvider = (props) => {
 
     const cancelAppointment = async (appointmentId) => {
         try {
-            const { data } = await axios.post("http://localhost:4000/api/admin/cancelAppointment",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/admin/cancelAppointment",
                 { appointmentId }
                 ,
                 {
@@ -94,7 +94,7 @@ const AdminContextProvider = (props) => {
 
     const getDashData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/admin/dashboard",
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/admin/dashboard",
                 {
                     headers: { "token": token }
                 }
