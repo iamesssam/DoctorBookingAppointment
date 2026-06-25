@@ -20,7 +20,7 @@ const Login = () => {
         e.preventDefault();
         try {
             if (state === "Admin") {
-                const { data } = await axios.post("http://localhost:4000/api/admin/login",
+                const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/admin/login",
                     {
                         email, password
                     })
@@ -36,7 +36,7 @@ const Login = () => {
 
             } else {
                 try {
-                    const { data } = await axios.post("http://localhost:4000/api/doctor/doctorLogin",
+                    const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/doctor/doctorLogin",
                         {
                             email, password
                         }
