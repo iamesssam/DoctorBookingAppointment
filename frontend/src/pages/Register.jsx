@@ -18,7 +18,7 @@ const Register = () => {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post("http://localhost:4000/api/user/register",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/user/register",
                 { name, email, password }
             );
 
