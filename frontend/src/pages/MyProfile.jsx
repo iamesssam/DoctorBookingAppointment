@@ -25,7 +25,7 @@ const MyProfile = () => {
 
             image && formData.append("image", image);
 
-            const { data } = await axios.post("http://localhost:4000/api/user/updateProfile",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/user/updateProfile",
                 formData,
                 { headers: { "token": token } }
             );
