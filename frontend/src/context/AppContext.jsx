@@ -25,7 +25,7 @@ const AppContextProvider = (props) => {
 
     const userProfileData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/user/profile",
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/user/profile",
                 {
                     headers: { "token": token }
                 }
