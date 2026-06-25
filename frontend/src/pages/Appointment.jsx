@@ -114,7 +114,7 @@ const Appointment = () => {
 
             const slotDate = day + "_" + month + "_" + year;
 
-            const { data } = await axios.post("http://localhost:4000/api/user/bookAppointment",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/user/bookAppointment",
                 {
                     docId, slotDate, slotTime,
                 },
