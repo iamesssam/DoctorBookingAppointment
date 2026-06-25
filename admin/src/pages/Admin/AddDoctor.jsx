@@ -41,7 +41,7 @@ const AddDoctor = () => {
             formData.append('address', JSON.stringify({ line1: address1, line2: address2 }));
             formData.append("image", docImg);
 
-            const { data } = await axios.post("http://localhost:4000/api/admin/addDoctor",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/admin/addDoctor",
                 formData,
                 {
                     headers: { 'token': token }
