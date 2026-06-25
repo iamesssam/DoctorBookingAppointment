@@ -15,7 +15,7 @@ const AppContextProvider = (props) => {
 
     const getDoctorsData = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/doctor/allDoctors");
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/doctor/allDoctors");
             setDoctors(data.doctors);
         } catch (error) {
             toast.error(error.message);
