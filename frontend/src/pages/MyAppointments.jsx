@@ -22,7 +22,7 @@ const MyAppointments = () => {
 
     const getUserAppointments = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/user/myAppointments",
+            const { data } = await axios.get("https://doctorbookingappointment-backend.onrender.com/api/user/myAppointments",
                 {
                     headers: { "token": token }
                 }
@@ -40,7 +40,7 @@ const MyAppointments = () => {
 
     const cancelAppointment = async (appointmentId) => {
         try {
-            const { data } = await axios.post("http://localhost:4000/api/user/cancelAppointment",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/user/cancelAppointment",
                 { appointmentId },
                 { headers: { "token": token } }
             )
@@ -188,7 +188,7 @@ const MyAppointments = () => {
             }
 
             // طلب عملية الدفع من الباك إند
-            const { data } = await axios.post("http://localhost:4000/api/user/stripePayment",
+            const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/user/stripePayment",
                 { appointmentId },
                 { headers: { "token": token } }
             );
@@ -235,7 +235,7 @@ const MyAppointments = () => {
 
             // 3️⃣ لو الدفع نجح بنروح نعمل verify في الباك إند
             if (paymentIntent && paymentIntent.status === "succeeded") {
-                const { data } = await axios.post("http://localhost:4000/api/user/verifyPayment",
+                const { data } = await axios.post("https://doctorbookingappointment-backend.onrender.com/api/user/verifyPayment",
                     {
                         appointmentId: currentOrder.metadata.receipt, // قراءة الـ ID من الميتاداتا
                         paymentIntentId: paymentIntent.id
